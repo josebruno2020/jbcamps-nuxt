@@ -1,5 +1,5 @@
 <template>
-  <section class="welcome">
+  <section class="welcome">   
     <article class="welcome-social">
       <WelcomeTitle title="test" />
       <div class="social-media">
@@ -11,13 +11,12 @@
         <SocialButton icon="envelope" link="https://www.linkedin.com/in/josé-bruno-campanholi-dos-santos-354502204" />
       </div>
     </article>
-
-
+    
     <article class="welcome-img">
       <img src="~/assets/img/jbcamps.png" alt="José Bruno" :title="$t('personal.phrase')">
     </article>
   </section>
-
+ 
   <section>
     <SectionTitle :title="$t('sections.skills')" />
     <article class="skills">
