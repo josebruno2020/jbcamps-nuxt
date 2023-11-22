@@ -1,15 +1,12 @@
 <template>
   <div class="welcome-title">
-    <p>Senior Fullstack Developer</p>
+    <p>{{ $t('personal.position') }}</p>
     <h2 class="title">José Bruno Campanholi dos Santos</h2>
-    <p>Just carry on 🚀</p>
+    <p>{{ $t('personal.phrase') }}</p>
   </div>
 </template>
 
 <script setup lang="ts">
-interface titleProps {
-  title: string
-}
 </script>
 
 <style scoped>

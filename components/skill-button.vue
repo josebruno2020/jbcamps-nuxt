@@ -1,10 +1,10 @@
 <template>
-  <div class="skill-button" @mouseenter="onHover" @mouseout="reset">
+  <div class="skill-button" @click="onClick">
     <Transition>
       <span v-if="titleVisible" class="skill-name">{{ title }}</span>
     </Transition>
     <Transition>
-      <i :class="icon" style="font-size: 3rem;" v-if="imageVisible"></i>
+      <i :class="`devicon-${icon}-plain`" class="icon" v-if="imageVisible"></i>
     </Transition>
   </div>
 </template>
@@ -19,16 +19,9 @@ defineProps<skillButtonProps>()
 const titleVisible = ref(false)
 const imageVisible = ref(true)
 
-function onHover() {
-  imageVisible.value = false
-  setTimeout(() => titleVisible.value = true, 50)
-  // titleVisible.value = true
-}
-
-function reset() {
-  titleVisible.value = false
-  setTimeout(() => imageVisible.value = true, 50)
-  // imageVisible.value = true
+function onClick () {
+  imageVisible.value = !imageVisible.value
+  titleVisible.value = !titleVisible.value
 }
 </script>
 
@@ -42,25 +35,41 @@ function reset() {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-/* .skill-button:hover {
-  background-color: rgba(37, 49, 55, .1)
-} */
+  cursor: pointer;
+}
 
 .skill-name {
   font-weight: 400;
-  /* z-index: 9999; */
+}
+
+.icon {
+  font-size: 3rem !important;
 }
 
 
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.02s ease;
+  transition: opacity 0.1s ease;
 }
 
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
+}
+
+@media (max-width: 800px) {
+  .skill-button {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skill-name {
+    font-size: .8rem;
+  }
+
+  .icon {
+    font-size: 2.5rem !important;
+  }
 }
 </style>

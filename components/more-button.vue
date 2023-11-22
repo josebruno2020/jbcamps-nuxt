@@ -1,8 +1,8 @@
 <template>
   <div class="more-button">
-    <a :href="link" target="_blank" title="More...">
+    <a :href="link" target="_blank" :title="`${$t('more')}...`">
       <v-btn prepend-icon="mdi-arrow-top-right" variant="tonal" style="width: 100%;">
-        More
+        {{ $t('more') }}
       </v-btn>
     </a>
   </div>

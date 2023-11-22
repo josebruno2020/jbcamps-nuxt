@@ -12,7 +12,8 @@ export default defineNuxtConfig({
   },
   modules: [
     "nuxt-bootstrap-icons",
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/i18n'
   ],
   vite: {
     define: {
@@ -29,5 +30,13 @@ export default defineNuxtConfig({
     families: {
       'Roboto': [100, 400, 500, 700]
     }
+  },
+
+  i18n: {
+    vueI18n: './i18n/config.ts',
+    defaultLocale: 'en',
+    locales: ['en', 'pt'],
+    strategy: 'prefix',
+    detectBrowserLanguage: false
   }
 })

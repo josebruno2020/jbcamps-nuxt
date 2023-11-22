@@ -14,94 +14,96 @@
 
 
     <article class="welcome-img">
-      <img src="~/assets/img/jbcamps.png" alt="José Bruno" title="Just carry on🚀">
+      <img src="~/assets/img/jbcamps.png" alt="José Bruno" :title="$t('personal.phrase')">
     </article>
   </section>
-  
+
   <section>
-    <SectionTitle title="Skills" />
+    <SectionTitle :title="$t('sections.skills')" />
     <article class="skills">
-      <SkillButton icon="devicon-typescript-plain" title="Typescript" />
-      <SkillButton icon="devicon-php-plain" title="PHP" />
-      <SkillButton icon="devicon-laravel-plain" title="Laravel" />
-      <SkillButton icon="devicon-nodejs-plain" title="NodeJs" />
-      <SkillButton icon="devicon-vuejs-plain" title="VueJs" />
-      <SkillButton icon="devicon-nuxtjs-plain" title="Nuxtjs" />
-      <SkillButton icon="devicon-react-plain" title="React" />
-      <SkillButton icon="devicon-kotlin-plain" title="Kotlin" />
-      <SkillButton icon="devicon-postgresql-plain" title="Postgres" />
-      <SkillButton icon="devicon-mysql-plain" title="MySql" />
+      <SkillButton icon="typescript" title="Typescript" />
+      <SkillButton icon="php" title="PHP" />
+      <SkillButton icon="laravel" title="Laravel" />
+      <SkillButton icon="nodejs" title="NodeJs" />
+      <SkillButton icon="vuejs" title="VueJs" />
+      <SkillButton icon="nuxtjs" title="Nuxtjs" />
+      <SkillButton icon="react" title="React" />
+      <SkillButton icon="kotlin" title="Kotlin" />
+      <SkillButton icon="postgresql" title="Postgres" />
+      <SkillButton icon="mysql" title="MySql" />
     </article>
   </section>
 
   <section class="experiences-education">
     <section class="experience-section">
-      <SectionTitle title="Experience" />
+      <SectionTitle :title="$t('sections.experience')" />
       <article class="experiences">
-        <ExperienceCard title="Ligue Telecom" subtitle="2022 - Today" description="Senior Web Developer" />
-        <ExperienceCard title="Trade Technology" subtitle="2021 - 2022" description="Fullstack Web Developer" />
-        <ExperienceCard title="Bitzen Tecnologia" subtitle="2021" description="Fullstack Web Developer" />
+        <ExperienceCard v-for="({ title, position, period }) in experiences"
+          :title="title"
+          :subtitle="period"
+          :description="position"
+        />
       </article>
       <MoreButton :link="linkedinUrl" />
     </section>
 
     <section class="education-section">
-      <SectionTitle title="Education" />
+      <SectionTitle :title="$t('sections.education')" />
       <article>
-        <ExperienceCard title="Sistemas para Internet" subtitle="Unicesumar (2022)" />
-        <ExperienceCard title="Licenciatura Português / Inglês" subtitle="Unicesumar (2022)" />
+        <ExperienceCard v-for="({title, subtitle}) in educations"
+          :title="title"
+          :subtitle="subtitle"
+        />
       </article>
       <MoreButton :link="linkedinUrl" />
     </section>
   </section>
 
-  <SectionTitle title="Web Systems Projects" />
+  <SectionTitle :title="$t('sections.systems')" />
   <section class="projects-section">
-    <ProjectCard
-      title="Monintox"
-      description="Sistema de gerenciamento da Clínica de desintoxicação de Sarandi/PR, emitindo notificações seguindo o padrão do Governo. Existe um chat interno dentro do sistema."
-      link="https://monintox.online"
-      :skills="['Laravel', 'PHP', 'VueJs', 'MySql', 'NodeJs']"
-    />
-    <ProjectCard
-      title="RPonto+"
-      description="Sistema de gerenciamento de Ponto dos Residentes do HU de Maringá/PR"
-      link="https://redcap.uem.br/hum-cpr"
-      :skills="['Laravel', 'MySql']"
-    />
-    <ProjectCard
-      title="HCWM System"
-      description="Sistema de gerenciamento dos Resíduos do HU de Maringá/PR"
-      link="https://residuoshum.com.br/"
-      :skills="['Laravel', 'MySql']"
-    />
-    <ProjectCard
-      title="Dreno Torax"
-      description="Questionários onlie sobre Cuidados de enfermagem com pacientes em uso de drenagem pleural"
-      link="https://drenotorax.com.br/"
-      :skills="['Laravel', 'MySql']"
-    />
-    <ProjectCard
-      title="Orbi Backoffice"
-      description="Sistema de gerenciamento e armazenamento de contratos e propostas da Corretora juntamente com seus clientes."
-      link="https://backoffice.orbibrasil.com.br"
-      :skills="['Laravel', 'MySql', 'Amazon S3']"
-    />
+    <ProjectCard v-for="({ title, description, link, skills }) in webSystems" :title="title" :description="description"
+      :link="link" :skills="skills" />
   </section>
 
-  <SectionTitle title="Websites Projects" />
+  <SectionTitle :title="$t('sections.websites')" />
   <section class="projects-section">
-    <ProjectCard
-      title="Orbi brasil"
-      description="Site Institucional da Orbi Corretora de Mercadorias. (Em fase de atualização para uma versão mais moderna 😊)"
-      link="https://orbibrasil.com.br/"
-      :skills="['PHP', 'MySql']"
-    />
+    <ProjectCard v-for="({ title, description, link, skills }) in webSites" :title="title" :description="description"
+      :link="link" :skills="skills" />
+  </section>
+
+  <SectionTitle :title="$t('sections.personal')" />
+  <section class="projects-section">
+    <ProjectCard v-for="({ title, description, link, skills }) in personalProjects" :title="title" :description="description"
+      :link="link" :skills="skills" />
+  </section>
+
+  <SectionTitle :title="$t('sections.testimonials')" />
+  <section class="testimonials">
+    <Testimonials />
   </section>
 </template>
 
 <script setup lang="ts">
+import type { experienceCardProps } from '~/components/experience-card.vue';
+import type { projectCardProps } from '~/components/project-card.vue';
+
+interface experienceI18n {
+  title: string
+  position: string
+  period: string
+}
+
 const linkedinUrl = ref('https://www.linkedin.com/in/josé-bruno-campanholi-dos-santos-354502204')
+const { messages, locale } = useI18n()
+const experiences = getFromMessages('experience') as experienceI18n[]
+const educations = getFromMessages('education') as experienceCardProps[]
+const webSystems = getFromMessages('systems') as projectCardProps[]
+const webSites = getFromMessages('websites') as projectCardProps[]
+const personalProjects = getFromMessages('projectPersonal') as projectCardProps[]
+
+function getFromMessages (key: string) {
+  return messages.value[locale.value][key]
+}
 </script>
 
 <style scoped>
@@ -147,7 +149,8 @@ const linkedinUrl = ref('https://www.linkedin.com/in/josé-bruno-campanholi-dos-
   flex-wrap: wrap;
 }
 
-.experience-section, .education-section {
+.experience-section,
+.education-section {
   width: 45%;
 }
 
@@ -161,25 +164,36 @@ const linkedinUrl = ref('https://www.linkedin.com/in/josé-bruno-campanholi-dos-
   justify-content: space-between;
 }
 
+.testimonials {
+  margin-top: 10px;
+}
+
+
+
 @media (max-width: 800px) {
   .welcome {
     flex-direction: column-reverse;
   }
+
   .welcome-img {
     display: flex;
     justify-content: center;
   }
+
   .welcome-social {
     gap: 1rem;
   }
+
   .social-media {
     width: 100%;
   }
+
   .skills {
     justify-content: center;
   }
 
-  .experience-section, .education-section {
+  .experience-section,
+  .education-section {
     width: 100%;
   }
 }

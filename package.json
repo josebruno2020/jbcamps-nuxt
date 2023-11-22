@@ -13,6 +13,7 @@
     "@mdi/font": "^7.3.67",
     "@nuxt/devtools": "latest",
     "@nuxtjs/google-fonts": "^3.0.2",
+    "@nuxtjs/i18n": "next",
     "nuxt": "^3.8.1",
     "nuxt-bootstrap-icons": "^1.0.3",
     "sass": "^1.69.5",

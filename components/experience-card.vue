@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-interface experienceCardProps {
+export interface experienceCardProps {
   title: string
   subtitle: string
   description?: string

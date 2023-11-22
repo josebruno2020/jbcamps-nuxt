@@ -1,6 +1,28 @@
 <template>
   <v-layout class="rounded rounded-md">
-    <v-app-bar title="My little space in the world 🌍" :color="bg"></v-app-bar>
+    <v-app-bar :title="$t('slug')" :color="bg" class="app-bar">
+      <template v-slot:append>
+        <v-menu location="bottom">
+          <template v-slot:activator="{ props }">
+            <a href="https://github.com/josebruno2020/jbcamps-nuxt" target="_blank" >
+              <v-btn icon="mdi-github" :title="$t('github')"></v-btn>
+            </a>
+            <v-btn icon="mdi-translate" v-bind="props"></v-btn>
+          </template>
+
+          <v-list>
+            <v-list-item :active="locale === title.toLowerCase()" v-for="({ title }, index) in items" :key="index">
+              <v-list-item-title>
+                <NuxtLink :to="switchLocalePath(title.toLocaleLowerCase())">
+                  {{ title }}
+                </NuxtLink>
+              </v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+
+      </template>
+    </v-app-bar>
     <v-main class="">
       <slot />
     </v-main>
@@ -19,6 +41,14 @@ import { useTheme } from 'vuetify/lib/framework.mjs';
 const bg = ref('transparent')
 const theme = useTheme()
 
+const switchLocalePath = useSwitchLocalePath()
+const { locale } = useI18n()
+const items = [
+  { title: 'En' },
+  { title: 'Pt' },
+]
+
+
 onMounted(() => {
   window.onscroll = () => {
     changeColor()
@@ -36,3 +66,16 @@ function changeColor() {
   }
 }
 </script>
+
+<style scoped>
+.app-bar {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+}
+</style>
