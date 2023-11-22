@@ -89,21 +89,43 @@ export default defineI18nConfig(() => ({
       ],
       projectPersonal: [
         {
-          title: 'JBFinancial',
-          description: '',
+          title: 'JB Financial',
+          description: 'System for personal financial control or for a group of users. Contact me to create a user and try it out, for free.',
           skills: ['PHP', 'Mysql', 'VueJs'],
           link: 'https://financial.jbcamps.dev/'
         }
       ],
-      testimonials: [],
-      welcome: 'Welcome'
+      testimonials: [
+        {
+          name: 'Prof. Elias Carvalho',
+          position: [
+            'Specialist in Information Systems from UEM.',
+            'Specialist in Applied Statistics from UEM.',
+            'Master in Computer Science from UFRGS.',
+            'PhD in Applied Computing from PUC-PR.',
+            'IT expert for the PR Court of Justice.',
+            'Head of the Development Division-NPD-UEM.'
+          ],
+          description: "José Bruno is a competent, efficient, flexible and honest professional. He knows how to work in a team and has IT knowledge to develop applications and systems efficiently. I've done several projects with it and the result was praise from users for all the work. I highly recommend your work! (Original in Portuguese)."
+        },
+        {
+          name: 'Gisele Ferreira',
+          position: ['Master in Management, Innovation and Technology in Urgent and Emergency by UEM.'],
+          description: 'I received a recommendation for his work, and today I recommend his work. He developed my system quickly, according to very specific needs, as it was a previously unheard-of health system. In addition to being very kind, helpful and polite. Just to thank. (Original in Portuguese).'
+        },
+        {
+          name: 'Paula Abrante',
+          position: ['Master in Management, Innovation and Technology in Urgent and Emergency by UEM.'],
+          description: "I would like to praise José Bruno's competence and commitment. An excellent professional who developed a system for my master's work. <br> His commitment was very important for me to be able to finish my work. (Original in Portuguese)."
+        }
+      ],
     },
     pt: {
       slug: 'Meu pequeno espaço no mundo 🌍',
       github: 'Dê uma estrela no Github ⭐',
       personal: {
         position: 'Desenolvedor Fullstack Sênior',
-        phrase: 'Apensa siga em frente 🚀'
+        phrase: 'Apenas siga em frente 🚀'
       },
       sections: {
         skills: 'Habilidades',
@@ -185,8 +207,8 @@ export default defineI18nConfig(() => ({
       ],
       projectPersonal: [
         {
-          title: 'JBFinancial',
-          description: 'Mudar isso aqui...',
+          title: 'JB Financial',
+          description: 'Sistema para controle financeiro pessoal ou para grupo de usuários. Contate-me para criar um usuário e fazer o teste, gratuitamente.',
           skills: ['PHP', 'Mysql', 'VueJs'],
           link: 'https://financial.jbcamps.dev/'
         }
@@ -215,7 +237,6 @@ export default defineI18nConfig(() => ({
           description: 'Gostaria de exaltar a competência e comprometimento do José Bruno. Um profissional excelente que desenvolveu um sistema para o meu trabalho de mestrado. <br> O seu comprometimento foi muito importante para que conseguisse terminar o meu trabalho.'
         }
       ],
-      welcome: 'Bem-vindo'
     }
   }
 }))

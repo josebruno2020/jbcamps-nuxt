@@ -1,6 +1,6 @@
 <template>
   <div class="section-title">
-    <h2>{{ title }}</h2>
+    <h2 class="title">{{ title }}</h2>
   </div>
 </template>
 
@@ -17,9 +17,17 @@ defineProps<sectionTitleProps>()
   margin-top: 50px;
 }
 
-@media (max-width: 600px) {
+.title {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 800px) {
   .section-title h2 {
     text-align: center;
+  }
+
+  .title {
+    font-size: 1.5rem;
   }
 }
 </style>

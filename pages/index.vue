@@ -22,12 +22,13 @@
     <SectionTitle :title="$t('sections.skills')" />
     <article class="skills">
       <SkillButton icon="typescript" title="Typescript" />
-      <SkillButton icon="php" title="PHP" />
-      <SkillButton icon="laravel" title="Laravel" />
+      <SkillButton icon="javascript" title="Javascript" />
       <SkillButton icon="nodejs" title="NodeJs" />
       <SkillButton icon="vuejs" title="VueJs" />
       <SkillButton icon="nuxtjs" title="Nuxtjs" />
       <SkillButton icon="react" title="React" />
+      <SkillButton icon="php" title="PHP" />
+      <SkillButton icon="laravel" title="Laravel" />
       <SkillButton icon="kotlin" title="Kotlin" />
       <SkillButton icon="postgresql" title="Postgres" />
       <SkillButton icon="mysql" title="MySql" />
