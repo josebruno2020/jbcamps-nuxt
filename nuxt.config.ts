@@ -15,7 +15,8 @@ export default defineNuxtConfig({
   modules: [
     "nuxt-bootstrap-icons",
     '@nuxtjs/google-fonts',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    'nuxt-gtag'
   ],
   vite: {
     define: {
@@ -40,5 +41,9 @@ export default defineNuxtConfig({
     locales: ['en', 'pt', 'es'],
     strategy: 'prefix',
     detectBrowserLanguage: false
+  },
+
+  gtag: {
+    id: 'G-NPLTRPLN33'
   }
 })
