@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '~/assets/css/global.css',
     'vuetify/lib/styles/main.sass',
     '@mdi/font/css/materialdesignicons.min.css',
-    'flag-icons/css/flag-icons.min.css'
+    'flag-icons/css/flag-icons.min.css',
+    'devicon/devicon.min.css'
   ],
   build: {
     transpile: ['vuetify'],
@@ -36,7 +37,7 @@ export default defineNuxtConfig({
   i18n: {
     vueI18n: './i18n/config.ts',
     defaultLocale: 'pt',
-    locales: ['en', 'pt'],
+    locales: ['en', 'pt', 'es'],
     strategy: 'prefix',
     detectBrowserLanguage: false
   }

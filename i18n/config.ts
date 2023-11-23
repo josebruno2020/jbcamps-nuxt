@@ -119,12 +119,13 @@ export default defineI18nConfig(() => ({
           description: "I would like to praise José Bruno's competence and commitment. An excellent professional who developed a system for my master's work. <br> His commitment was very important for me to be able to finish my work. (Original in Portuguese)."
         }
       ],
+      footer: 'Made with ❤️'
     },
     pt: {
       slug: 'Meu pequeno espaço no mundo 🌍',
       github: 'Dê uma estrela no Github ⭐',
       personal: {
-        position: 'Desenolvedor Fullstack Sênior',
+        position: 'Desenvolvedor Fullstack Sênior',
         phrase: 'Apenas siga em frente 🚀'
       },
       sections: {
@@ -186,7 +187,7 @@ export default defineI18nConfig(() => ({
         },
         {
           title: 'Dreno Torax',
-          description: 'Questionários onlie sobre Cuidados de enfermagem com pacientes em uso de drenagem pleural',
+          description: 'Questionários onlie sobre Cuidados de enfermagem com pacientes em uso de drenagem pleural.',
           skills: ['Laravel', 'Mysql'],
           link: 'https://drenotorax.com.br/'
         },
@@ -237,6 +238,127 @@ export default defineI18nConfig(() => ({
           description: 'Gostaria de exaltar a competência e comprometimento do José Bruno. Um profissional excelente que desenvolveu um sistema para o meu trabalho de mestrado. <br> O seu comprometimento foi muito importante para que conseguisse terminar o meu trabalho.'
         }
       ],
-    }
+      footer: 'Feito com ❤️'
+    },
+    es: {
+      slug: 'Meu pequeno espaço no mundo 🌍',
+      github: 'Dale una estrella en Github ⭐',
+      personal: {
+        position: 'Desarrollador Sénior Fullstack',
+        phrase: 'Siga adelante 🚀'
+      },
+      sections: {
+        skills: 'Habilidades',
+        experience: 'Experiencia',
+        education: 'Capacitación',
+        systems: 'Proyectos en sistemas Web',
+        websites: 'Proyectos en sitios web',
+        personal: 'Proyectos personales',
+        testimonials: 'Testimonios'
+      },
+      today: 'Hoy',
+      more: 'Más',
+      experience: [
+        {
+          title: 'Ligue Telecom',
+          position: 'Desarrollador Web Sénior',
+          period: '2022 - Hoy'
+        },
+        {
+          title: 'Trade Technology',
+          position: 'Desarrollador Web Fullstack',
+          period: '2021 - 2022'
+        },
+        {
+          title: 'Bitzen Tecnologia',
+          position: 'Desarrollador Web Fullstack',
+          period: '2021'
+        }
+      ],
+      education: [
+        {
+          title: 'Sistemas para Web',
+          subtitle: 'Unicesumar (2022)'
+        },
+        {
+          title: 'Graduación Portugués / Inglés',
+          subtitle: 'Unicesumar (2022)'
+        }
+      ],
+      systems: [
+        {
+          title: 'Monintox',
+          description: 'Sistema de gestión para clínica de desintoxicación Sarandí/PR, emitiendo notificaciones siguiendo estándar del Gobierno Brasileño, con chat integrado para que los enfermeros se comuniquen entre sí en tiempo real.',
+          skills: ['Laravel', 'PHP', 'VueJs', 'Mysql', 'NodeJs'],
+          link: 'https://monintox.online'
+        },
+        {
+          title: 'RPonto+',
+          description: 'Sistema de gestión de puntos para residentes del HUM (Hospital Universitario de Maringá).',
+          skills: ['Laravel', 'Mysql'],
+          link: 'https://redcap.uem.br/hum-cpr'
+        },
+        {
+          title: 'HCWM System',
+          description: 'Sistema de gestión de residuos hospitalarios del HUM (Hospital Universitario de Maringá).',
+          skills: ['Laravel', 'Mysql'],
+          link: 'https://residuoshum.com.br/'
+        },
+        {
+          title: 'Dreno Torax',
+          description: 'Cuestionarios online sobre cuidados de enfermería a pacientes que utilizan drenaje pleural.',
+          skills: ['Laravel', 'Mysql'],
+          link: 'https://drenotorax.com.br/'
+        },
+        {
+          title: 'Orbi Backoffice',
+          description: 'Sistema de gestión y almacenamiento de contratos y propuestas para Orbi Corretora junto con sus clientes.',
+          skills: ['Laravel', 'Mysql', 'Amazon S3'],
+          link: 'https://backoffice.orbibrasil.com.br'
+        }
+      ],
+      websites: [
+        {
+          title: 'Orbi Brasil',
+          description: 'Sitio web institucional de Orbi Corretora de Mercadorias. (En fase de actualización a una versión más moderna 😊).',
+          skills: ['PHP', 'Mysql'],
+          link: 'https://orbibrasil.com.br/'
+        }
+      ],
+      projectPersonal: [
+        {
+          title: 'JB Financial',
+          description: 'Sistema de control financiero personal o para un grupo de usuarios. Contáctame para crear un usuario y probarlo, gratis.',
+          skills: ['PHP', 'Mysql', 'VueJs'],
+          link: 'https://financial.jbcamps.dev/'
+        }
+      ],
+      //TODO
+      testimonials: [
+        {
+          name: 'Prof. Elias Carvalho',
+          position: [
+            'Especialista en Sistemas de Información por la UEM.',
+            'Especialista en Estadística Aplicada por la UEM.',
+            'Magíster en Informática por la UFRGS.',
+            'Doctorado en Computación Aplicada por la PUC-PR.',
+            'Experto en TI para el Tribunal de Justicia de PR.',
+            'Jefe de la División de Desarrollo-NPD-UEM.'
+          ],
+          description: 'José Bruno es un profesional competente, eficiente, flexible y honesto. Sabe trabajar en equipo y tiene conocimientos de TI para desarrollar aplicaciones y sistemas de manera eficiente. He realizado varios proyectos con él y el resultado fueron elogios de los usuarios por todo el trabajo. ¡Recomiendo mucho su trabajo! (Original en Portugués).'
+        },
+        {
+          name: 'Gisele Ferreira',
+          position: ['Máster en Gestión, Innovación y Tecnología en Urgencias y Emergencias por la UEM.'],
+          description: 'Recibí una recomendación por su trabajo y hoy recomiendo su trabajo. Desarrolló mi sistema rápidamente, según necesidades muy específicas, ya que era un sistema de salud nunca antes visto. Además de ser muy amable, servicial y educado. Sólo para agradecer. (Original en Portugués).'
+        },
+        {
+          name: 'Paula Abrante',
+          position: ['Máster en Gestión, Innovación y Tecnología en Urgencias y Emergencias por la UEM.'],
+          description: 'Me gustaría elogiar la competencia y el compromiso de José Bruno. Un excelente profesional que desarrolló un sistema para mi trabajo de maestría. <br> Su compromiso fue muy importante para mí para poder terminar mi trabajo. (Original en Portugués).'
+        }
+      ],
+      footer: 'Hecho con ❤️'
+    },
   }
 }))

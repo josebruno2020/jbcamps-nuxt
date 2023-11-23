@@ -15,9 +15,7 @@
               <NuxtLink :to="switchLocalePath(title.toLocaleLowerCase())" class="lang-item">
                 <span :class="`fi fi-${flag}`"></span>
                 <v-list-item-title>
-
                   {{ title }}
-
                 </v-list-item-title>
               </NuxtLink>
             </v-list-item>
@@ -32,7 +30,7 @@
 
     <v-footer app name="footer" class="d-flex justify-center">
       <span class="text-center">
-        Made with ❤️
+        {{ $t('footer') }}
       </span>
     </v-footer>
   </v-layout>
@@ -41,14 +39,15 @@
 <script setup lang="ts">
 import { useTheme } from 'vuetify/lib/framework.mjs';
 
-const bg = ref('transparent')
 const theme = useTheme()
+const bg = ref('transparent')
 
 const switchLocalePath = useSwitchLocalePath()
 const { locale } = useI18n()
 const items = [
   { title: 'En', flag: 'us' },
   { title: 'Pt', flag: 'br' },
+  { title: 'Es', flag: 'es' }
 ]
 
 
