@@ -248,6 +248,19 @@ export default defineI18nConfig(() => ({
           description: 'Gostaria de exaltar a competência e comprometimento do José Bruno. Um profissional excelente que desenvolveu um sistema para o meu trabalho de mestrado. <br> O seu comprometimento foi muito importante para que conseguisse terminar o meu trabalho.',
           image: 'paula.png',
           link: 'https://www.instagram.com/paulinhaabrante/'
+        },
+        {
+          name: 'Fabiane Kizima',
+          position: [''],
+          description: 'Gostaria de dar um feedback sobre o sistema que o José Bruno me ajudou a criar para o mestrado profissional. <br> Foi um sucesso! Após as reuniões,  o sistema foi desenvolvido exatamente como eu precisava. Os professores da banca e a equipe do comitê ficaram surpresos com as funcionalidades do sistema. <br> Agradeço todo apoio para o desenvolvimento do trabalho.',
+          image: 'fabiane.png'
+        },
+        {
+          name: 'Felipe Baptiston',
+          position: ['Analista de Sistemas'],
+          description: 'Profissional de uma qualidade ímpar, super responsável, tem um conhecimento amplo nas áreas que atua, dos 2 anos que trabalhei com ele sempre me foi uma inspiração, super respeitoso e competente, é alguém que dá gosto de se ter na equipe, que puxa todos junto com ele, ensina de bom grado e ajuda quem precisa, sem palavras para descrever o quão grande profissional o Bruno é.',
+          image: 'felipe.png',
+          link: 'https://www.linkedin.com/in/felipe-baptiston-a38042259/'
         }
       ],
       footer: 'Feito com ❤️'

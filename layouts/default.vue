@@ -1,6 +1,6 @@
 <template>
   <v-layout class="rounded rounded-md">
-    <v-app-bar :title="$t('slug')" :color="bg" class="app-bar" scroll-behavior="hide">
+    <v-app-bar :title="$t('slug')" :color="bg" class="app-bar" scroll-behavior="collapse">
       <template v-slot:append>
         <v-menu location="bottom">
           <template v-slot:activator="{ props }">

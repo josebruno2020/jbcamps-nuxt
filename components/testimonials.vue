@@ -1,5 +1,5 @@
 <template>
-  <v-carousel height="auto" hide-delimiters progress="white" show-arrows="hover">
+  <v-carousel height="auto" hide-delimiters progress="#00897B" show-arrows="hover">
     <v-carousel-item v-for="(slide, i) in slides" :key="i">
       <v-sheet class="testimonial">
         <div class="testimonial-container">
@@ -8,12 +8,12 @@
           </div>
           <article class="text-center mt-5">
             <img v-if="slide.image" :src="`/img/${slide.image}`" alt="" class="testimonial-img">
-            <a :href="slide.link" target="_blank" class="testimonial-link">
+            <a :href="slide.link" target="_blank" class="testimonial-link" :title="slide.name">
               <div class="testimonial-name">
                 {{ slide.name }}
               </div>
             </a>
-            <div v-for="position in slide.position">
+            <div v-for="position in slide.position" style="line-height: 1.35rem;">
               <span class="testimonial-position">{{ position }}</span>
             </div>
           </article>
@@ -89,6 +89,10 @@ const slides = messages.value[locale.value].testimonials as testimonialSlide[]
 
   .testimonial-position {
     font-size: .65rem;
+  }
+
+  .testimonial-img {
+    width: 85px;
   }
 }
 </style>
