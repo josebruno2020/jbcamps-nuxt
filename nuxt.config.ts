@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     defaultLocale: 'pt',
     locales: ['en', 'pt', 'es'],
     strategy: 'prefix',
-    detectBrowserLanguage: false
+    detectBrowserLanguage: false,
   },
 
   gtag: {

@@ -3,13 +3,16 @@
     <v-carousel-item v-for="(slide, i) in slides" :key="i">
       <v-sheet class="testimonial">
         <div class="testimonial-container">
-          <div>
+          <div class="text-justify">
             <q class="text-justify description" v-html="slide.description"></q>
           </div>
           <article class="text-center mt-5">
-            <div class="testimonial-name">
-              {{ slide.name }}
-            </div>
+            <img v-if="slide.image" :src="`/img/${slide.image}`" alt="" class="testimonial-img">
+            <a :href="slide.link" target="_blank" class="testimonial-link">
+              <div class="testimonial-name">
+                {{ slide.name }}
+              </div>
+            </a>
             <div v-for="position in slide.position">
               <span class="testimonial-position">{{ position }}</span>
             </div>
@@ -25,6 +28,8 @@ interface testimonialSlide {
   name: string
   description: string
   position: string[]
+  image?: string
+  link?: string
 }
 const { locale, messages } = useI18n()
 const slides = messages.value[locale.value].testimonials as testimonialSlide[]
@@ -36,7 +41,7 @@ const slides = messages.value[locale.value].testimonials as testimonialSlide[]
 }
 
 .testimonial {
-  min-height: 450px !important;
+  min-height: 500px !important;
   display: flex;
   padding: 20px 80px;
   background-color: rgba(255, 255, 255, 0.1) !important;
@@ -54,13 +59,22 @@ const slides = messages.value[locale.value].testimonials as testimonialSlide[]
 }
 
 .testimonial-name {
-  margin-top: 15px;
+  margin-top: 3px;
   font-size: 1.2rem;
   font-weight: 400;
 }
 
 .testimonial-position {
   font-size: .9rem;
+}
+
+.testimonial-img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.testimonial-link {
+  color: white;
 }
 
 
@@ -74,7 +88,7 @@ const slides = messages.value[locale.value].testimonials as testimonialSlide[]
   }
 
   .testimonial-position {
-    font-size: .8rem;
+    font-size: .65rem;
   }
 }
 </style>

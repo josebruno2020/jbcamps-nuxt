@@ -8,12 +8,12 @@
         <SocialButton icon="whatsapp"
           link="https://api.whatsapp.com/send?phone=5544988447123&text=I%20want%20to%20talk%20with%20you%20about..."
           background="#00a884" />
-        <SocialButton icon="envelope" link="https://www.linkedin.com/in/josé-bruno-campanholi-dos-santos-354502204" />
+        <SocialButton icon="envelope" link="mailto:josebrunocampanholi@gmail.com" />
       </div>
     </article>
     
     <article class="welcome-img">
-      <img src="~/assets/img/jbcamps.png" alt="José Bruno" :title="$t('personal.phrase')">
+      <img src="~/assets/img/jbcamps.jpg" alt="José Bruno" :title="$t('personal.phrase')">
     </article>
   </section>
  
@@ -65,11 +65,11 @@
       :link="link" :skills="skills" />
   </section>
 
-  <SectionTitle :title="$t('sections.websites')" />
+  <!-- <SectionTitle :title="$t('sections.websites')" />
   <section class="projects-section">
     <ProjectCard v-for="({ title, description, link, skills }) in webSites" :title="title" :description="description"
       :link="link" :skills="skills" />
-  </section>
+  </section> -->
 
   <SectionTitle :title="$t('sections.personal')" />
   <section class="projects-section">

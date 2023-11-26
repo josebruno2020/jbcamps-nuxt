@@ -106,17 +106,23 @@ export default defineI18nConfig(() => ({
             'IT expert for the PR Court of Justice.',
             'Head of the Development Division-NPD-UEM.'
           ],
-          description: "José Bruno is a competent, efficient, flexible and honest professional. He knows how to work in a team and has IT knowledge to develop applications and systems efficiently. I've done several projects with it and the result was praise from users for all the work. I highly recommend your work! (Original in Portuguese)."
+          description: "José Bruno is a competent, efficient, flexible and honest professional. He knows how to work in a team and has IT knowledge to develop applications and systems efficiently. I've done several projects with it and the result was praise from users for all the work. I highly recommend your work! (Original in Portuguese).",
+          image: 'elias.jpg',
+          link: 'https://www.linkedin.com/in/elias-césar-araújo-de-carvalho-93697022/'
         },
         {
           name: 'Gisele Ferreira',
           position: ['Master in Management, Innovation and Technology in Urgent and Emergency by UEM.'],
-          description: 'I received a recommendation for his work, and today I recommend his work. He developed my system quickly, according to very specific needs, as it was a previously unheard-of health system. In addition to being very kind, helpful and polite. Just to thank. (Original in Portuguese).'
+          description: 'I received a recommendation for his work, and today I recommend his work. He developed my system quickly, according to very specific needs, as it was a previously unheard-of health system. In addition to being very kind, helpful and polite. Just to thank. (Original in Portuguese).',
+          image: 'gisele.png',
+          link: 'https://www.instagram.com/giferreir/'
         },
         {
           name: 'Paula Abrante',
           position: ['Master in Management, Innovation and Technology in Urgent and Emergency by UEM.'],
-          description: "I would like to praise José Bruno's competence and commitment. An excellent professional who developed a system for my master's work. <br> His commitment was very important for me to be able to finish my work. (Original in Portuguese)."
+          description: "I would like to praise José Bruno's competence and commitment. An excellent professional who developed a system for my master's work. <br> His commitment was very important for me to be able to finish my work. (Original in Portuguese).",
+          image: 'paula.png',
+          link: 'https://www.instagram.com/paulinhaabrante/'
         }
       ],
       footer: 'Made with ❤️'
@@ -225,17 +231,23 @@ export default defineI18nConfig(() => ({
             'Perito em TI para o Tribunal de Justiça do PR.',
             'Chefe da Divisão de Desenvolvimento-NPD-UEM.'
           ],
-          description: 'José Bruno é um profissional competente, eficiente, flexível  e honesto. Sabe trabalhar em equipe e tem conhecimento de TI para desenvolver aplicativos e sistemas de forma eficiente. Já fiz vários projetos com ele e o resultado foi de elogio por parte dos usuários para todos os trabalho. Recomendo o seu trabalho com muito gosto!'
+          description: 'José Bruno é um profissional competente, eficiente, flexível  e honesto. Sabe trabalhar em equipe e tem conhecimento de TI para desenvolver aplicativos e sistemas de forma eficiente. Já fiz vários projetos com ele e o resultado foi de elogio por parte dos usuários para todos os trabalho. Recomendo o seu trabalho com muito gosto!',
+          image: 'elias.jpg',
+          link: 'https://www.linkedin.com/in/elias-césar-araújo-de-carvalho-93697022/'
         },
         {
           name: 'Gisele Ferreira',
           position: ['Mestra em Gestão, Inovação e Tecnologia em Urgente e Emergência pela UEM.'],
-          description: 'Recebi uma indicação do trabalho dele, e hoje eu que indico o seu trabalho. Ele desenvolveu o meu sistema com agilidade, de acordo com as necessidades que eram muito específicas, por se tratar de um sistema na área da saúde, até então inédito. Além de ser muito gentil, prestativo e educado. Só agradecer.'
+          description: 'Recebi uma indicação do trabalho dele, e hoje eu que indico o seu trabalho. Ele desenvolveu o meu sistema com agilidade, de acordo com as necessidades que eram muito específicas, por se tratar de um sistema na área da saúde, até então inédito. Além de ser muito gentil, prestativo e educado. Só agradecer.',
+          image: 'gisele.png',
+          link: 'https://www.instagram.com/giferreir/'
         },
         {
           name: 'Paula Abrante',
           position: ['Mestra em Gestão, Inovação e Tecnologia em Urgente e Emergência pela UEM.'],
-          description: 'Gostaria de exaltar a competência e comprometimento do José Bruno. Um profissional excelente que desenvolveu um sistema para o meu trabalho de mestrado. <br> O seu comprometimento foi muito importante para que conseguisse terminar o meu trabalho.'
+          description: 'Gostaria de exaltar a competência e comprometimento do José Bruno. Um profissional excelente que desenvolveu um sistema para o meu trabalho de mestrado. <br> O seu comprometimento foi muito importante para que conseguisse terminar o meu trabalho.',
+          image: 'paula.png',
+          link: 'https://www.instagram.com/paulinhaabrante/'
         }
       ],
       footer: 'Feito com ❤️'
@@ -333,7 +345,6 @@ export default defineI18nConfig(() => ({
           link: 'https://financial.jbcamps.dev/'
         }
       ],
-      //TODO
       testimonials: [
         {
           name: 'Prof. Elias Carvalho',
@@ -345,17 +356,23 @@ export default defineI18nConfig(() => ({
             'Experto en TI para el Tribunal de Justicia de PR.',
             'Jefe de la División de Desarrollo-NPD-UEM.'
           ],
-          description: 'José Bruno es un profesional competente, eficiente, flexible y honesto. Sabe trabajar en equipo y tiene conocimientos de TI para desarrollar aplicaciones y sistemas de manera eficiente. He realizado varios proyectos con él y el resultado fueron elogios de los usuarios por todo el trabajo. ¡Recomiendo mucho su trabajo! (Original en Portugués).'
+          description: 'José Bruno es un profesional competente, eficiente, flexible y honesto. Sabe trabajar en equipo y tiene conocimientos de TI para desarrollar aplicaciones y sistemas de manera eficiente. He realizado varios proyectos con él y el resultado fueron elogios de los usuarios por todo el trabajo. ¡Recomiendo mucho su trabajo! (Original en Portugués).',
+          image: 'elias.jpg',
+          link: 'https://www.linkedin.com/in/elias-césar-araújo-de-carvalho-93697022/'
         },
         {
           name: 'Gisele Ferreira',
           position: ['Máster en Gestión, Innovación y Tecnología en Urgencias y Emergencias por la UEM.'],
-          description: 'Recibí una recomendación por su trabajo y hoy recomiendo su trabajo. Desarrolló mi sistema rápidamente, según necesidades muy específicas, ya que era un sistema de salud nunca antes visto. Además de ser muy amable, servicial y educado. Sólo para agradecer. (Original en Portugués).'
+          description: 'Recibí una recomendación por su trabajo y hoy recomiendo su trabajo. Desarrolló mi sistema rápidamente, según necesidades muy específicas, ya que era un sistema de salud nunca antes visto. Además de ser muy amable, servicial y educado. Sólo para agradecer. (Original en Portugués).',
+          iimage: 'gisele.png',
+          link: 'https://www.instagram.com/giferreir/'
         },
         {
           name: 'Paula Abrante',
           position: ['Máster en Gestión, Innovación y Tecnología en Urgencias y Emergencias por la UEM.'],
-          description: 'Me gustaría elogiar la competencia y el compromiso de José Bruno. Un excelente profesional que desarrolló un sistema para mi trabajo de maestría. <br> Su compromiso fue muy importante para mí para poder terminar mi trabajo. (Original en Portugués).'
+          description: 'Me gustaría elogiar la competencia y el compromiso de José Bruno. Un excelente profesional que desarrolló un sistema para mi trabajo de maestría. <br> Su compromiso fue muy importante para mí para poder terminar mi trabajo. (Original en Portugués).',
+          image: 'paula.png',
+          link: 'https://www.instagram.com/paulinhaabrante/'
         }
       ],
       footer: 'Hecho con ❤️'

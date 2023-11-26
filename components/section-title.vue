@@ -18,7 +18,7 @@ defineProps<sectionTitleProps>()
 }
 
 .title {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 
 @media (max-width: 800px) {
@@ -27,7 +27,7 @@ defineProps<sectionTitleProps>()
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
 </style>

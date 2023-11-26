@@ -30,8 +30,8 @@ function onClick () {
   border: 1px solid #00897B;
   border-radius: 15px;
 
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,6 +40,7 @@ function onClick () {
 }
 
 .skill-name {
+  font-size: .85rem;
   font-weight: 400;
 }
 

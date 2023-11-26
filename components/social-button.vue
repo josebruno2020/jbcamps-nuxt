@@ -1,7 +1,7 @@
 <template>
   <div class="social-link">
     <a :href="link" target="_blank">
-      <BootstrapIcon :name="icon" style="font-size: 1.8rem; color: white;" />
+      <BootstrapIcon :name="icon" style="font-size: 1.65rem; color: white;" />
     </a>
   </div>
 </template>
@@ -19,8 +19,8 @@ defineProps<socialButtonProps>()
 <style scoped>
 
 .social-link{
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
