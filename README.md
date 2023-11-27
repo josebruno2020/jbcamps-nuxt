@@ -1,75 +1,35 @@
-# Nuxt 3 Minimal Starter
+# Site Portfólio 📝
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Bem vindo ao repositório [JBcamps](https://jbcamps.dev)!
 
-## Setup
+## Tecnologias utilizadas 👨‍💻
 
-Make sure to install the dependencies:
+Neste site utilizei o framework [NuxtJs](https://nuxt.com/), em sua versão 3.x.
 
-```bash
-# npm
-npm install
+O site está em 3 idiomas, sendo Português, Inglês e Espanhol. Para isso, utilizei de um módulo do Nuxt para [Internacionalização](https://i18n.nuxtjs.org/).
 
-# pnpm
-pnpm install
+Para estilização e tema dos componentes utilizei o [Vuetify](https://vuetifyjs.com/en/), uma biblioteca de componentes do Material Design para VueJs.
 
-# yarn
-yarn install
+### Estrutura utilizada
 
-# bun
-bun install
+Apesar de ser um projeto simples, separei os elementos em componentes, para ser mais fácil a reutilização. Eles estão na pasta [components](./components).
+
+Todo o conteúdo do site se encontra no arquivo de internacionalização, e assim de acordo com o idioma selecionado, as informações são carregadas deste [arquivo](./i18n/config.ts).
+
+
+## Deploy utilizado
+
+Utilizo a plataforma [Vercel](https://vercel.com) para realizar a esteira de deploy.
+
+O domínio está no Google Domains, apontando para a Vercel.
+
+## Objetivo do Projeto
+
+De forma descontraída e mais pessoal, mostrar minhas habilidades em programação, os projetos que já realizei e que estão em **produção**.
+A sessão "depoimentos" são palavras de pessoas que já trabalharam comigo ou que contratram meus serviços ❤️.
+
+---
+
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+Se gostou do site e do conteúdo, deixe uma estrela neste repositório ⭐.
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
