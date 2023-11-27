@@ -4,7 +4,7 @@ Bem vindo ao repositório [JBcamps](https://jbcamps.dev)!
 
 ## Tecnologias utilizadas 👨‍💻
 
-Neste site utilizei o framework [NuxtJs](https://nuxt.com/), em sua versão 3.x.
+Neste site utilizei o framework [NuxtJs](https://nuxt.com/), em sua versão 3.x., utilizando **Typescript**.
 
 O site está em 3 idiomas, sendo Português, Inglês e Espanhol. Para isso, utilizei de um módulo do Nuxt para [Internacionalização](https://i18n.nuxtjs.org/).
 
