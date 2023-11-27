@@ -85,6 +85,7 @@ const slides = messages.value[locale.value].testimonials as testimonialSlide[]
 
   .testimonial {
     padding: 30px;
+    min-height: 630px !important;
   }
 
   .testimonial-position {

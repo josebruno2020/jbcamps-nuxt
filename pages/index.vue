@@ -59,6 +59,11 @@
     </section>
   </section>
 
+  <SectionTitle :title="$t('sections.testimonials')" />
+  <section class="testimonials">
+    <Testimonials />
+  </section>
+
   <SectionTitle :title="$t('sections.systems')" />
   <section class="projects-section">
     <ProjectCard v-for="({ title, description, link, skills }) in webSystems" :title="title" :description="description"
@@ -77,10 +82,6 @@
       :link="link" :skills="skills" />
   </section>
 
-  <SectionTitle :title="$t('sections.testimonials')" />
-  <section class="testimonials">
-    <Testimonials />
-  </section>
 </template>
 
 <script setup lang="ts">

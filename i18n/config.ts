@@ -93,6 +93,12 @@ export default defineI18nConfig(() => ({
           description: 'System for personal financial control or for a group of users. Contact me to create a user and try it out, for free.',
           skills: ['PHP', 'Mysql', 'VueJs'],
           link: 'https://financial.jbcamps.dev/'
+        },
+        {
+          title: 'Taberna Medieval',
+          description: 'Website created to share fantastic stories and horror movies reviews.',
+          skills: ['PHP', 'Wordpress'],
+          link: 'https://tabernamedieval.com/'
         }
       ],
       testimonials: [
@@ -123,7 +129,33 @@ export default defineI18nConfig(() => ({
           description: "I would like to praise José Bruno's competence and commitment. An excellent professional who developed a system for my master's work. <br> His commitment was very important for me to be able to finish my work. (Original in Portuguese).",
           image: 'paula.png',
           link: 'https://www.instagram.com/paulinhaabrante/'
-        }
+        },
+        {
+          name: 'Cassiano Borim',
+          position: ['Project Manager'],
+          description: 'Bruno is a spectacular person and a unique professional. His commitment to tasks, results, deadlines and quality is daily and clear. He is always looking for the best solution and the best way to do it. Not only in relation to its activities, it helps all project stakeholders, whether in doubts, improvements, processes or definitions. Having it in a project is synonymous with good results delivered every time. (Original in Portuguese).',
+          image: 'cassiano.jpg',
+          link: 'https://www.linkedin.com/in/cassianoborim/'
+        },
+        {
+          name: 'Lucia Zuliani',
+          position: ['Master in Management, Innovation and Technology in Urgent and Emergency by UEM.'],
+          description: "I would like to thank the competent professional José Bruno, for his unconditional dedication and excellence in developing the software for my master's project in Urgency and Emergency at UEM. Always helpful. I highly recommend it. <br>Gratitude. (Original in Portuguese).",
+          image: 'lucia.jpg'
+        },
+        {
+          name: 'Felipe Baptiston',
+          position: ['Systems Analyst'],
+          description: 'Professional of unique quality, responsible, has extensive knowledge in the areas he works in, in the 2 years I worked with him he has always been an inspiration to me, super respectful and competent, he is someone who is a pleasure to have on the team, who pulls everyone together With him, he willingly teaches and helps anyone in need, there are no words to describe how great a professional Bruno is. (Original in Portuguese).',
+          image: 'felipe.png',
+          link: 'https://www.linkedin.com/in/felipe-baptiston-a38042259/'
+        },
+        {
+          name: 'Fabiane Kizima',
+          position: [''],
+          description: "I would like to give feedback on the system that José Bruno helped me create for my professional master's degree. <br> It was a success! After the meetings, the system was developed exactly as I needed it. The panel's teachers and committee team were surprised by the system's features. <br> I appreciate all the support for the development of the work. (Original in Portuguese).",
+          image: 'fabiane.png'
+        },
       ],
       footer: 'Made with ❤️'
     },
@@ -218,6 +250,12 @@ export default defineI18nConfig(() => ({
           description: 'Sistema para controle financeiro pessoal ou para grupo de usuários. Contate-me para criar um usuário e fazer o teste, gratuitamente.',
           skills: ['PHP', 'Mysql', 'VueJs'],
           link: 'https://financial.jbcamps.dev/'
+        },
+        {
+          title: 'Taberna Medieval',
+          description: 'Site criado para compartilhar histórias fantásticas e resenhas de filmes de terror.',
+          skills: ['PHP', 'Wordpress'],
+          link: 'https://tabernamedieval.com/'
         }
       ],
       testimonials: [
@@ -250,10 +288,17 @@ export default defineI18nConfig(() => ({
           link: 'https://www.instagram.com/paulinhaabrante/'
         },
         {
-          name: 'Fabiane Kizima',
-          position: [''],
-          description: 'Gostaria de dar um feedback sobre o sistema que o José Bruno me ajudou a criar para o mestrado profissional. <br> Foi um sucesso! Após as reuniões,  o sistema foi desenvolvido exatamente como eu precisava. Os professores da banca e a equipe do comitê ficaram surpresos com as funcionalidades do sistema. <br> Agradeço todo apoio para o desenvolvimento do trabalho.',
-          image: 'fabiane.png'
+          name: 'Cassiano Borim',
+          position: ['Gerente de Projetos'],
+          description: 'O Bruno é uma pessoa espetacular e um profissional ímpar. Seu comprometimento com as tarefas, com os resultados, com os prazos e com a qualidade é algo diário e nítido. Está sempre em busca da melhor solução e da melhor forma de fazê-la. Não somente em relação às suas atividades, ele auxilia todas as partes interessadas do projeto, seja em dúvidas, melhorias, processos ou definições. Tê-lo em um projeto, é sinônimo de bons resultados entregues sempre.',
+          image: 'cassiano.jpg',
+          link: 'https://www.linkedin.com/in/cassianoborim/'
+        },
+        {
+          name: 'Lucia Zuliani',
+          position: ['Mestra em Gestão, Inovação e Tecnologia em Urgente e Emergência pela UEM.'],
+          description: 'Só agradecimentos ao competente  profissional José Bruno,  por sua dedicação incondicional e excelência no desenvolvimento do software para o meu projeto de mestrado em Urgência e Emergência da UEM. Sempre prestativo. Super indico. <br>Gratidão. ',
+          image: 'lucia.jpg'
         },
         {
           name: 'Felipe Baptiston',
@@ -261,7 +306,14 @@ export default defineI18nConfig(() => ({
           description: 'Profissional de uma qualidade ímpar, super responsável, tem um conhecimento amplo nas áreas que atua, dos 2 anos que trabalhei com ele sempre me foi uma inspiração, super respeitoso e competente, é alguém que dá gosto de se ter na equipe, que puxa todos junto com ele, ensina de bom grado e ajuda quem precisa, sem palavras para descrever o quão grande profissional o Bruno é.',
           image: 'felipe.png',
           link: 'https://www.linkedin.com/in/felipe-baptiston-a38042259/'
-        }
+        },
+        {
+          name: 'Fabiane Kizima',
+          position: [''],
+          description: 'Gostaria de dar um feedback sobre o sistema que o José Bruno me ajudou a criar para o mestrado profissional. <br> Foi um sucesso! Após as reuniões,  o sistema foi desenvolvido exatamente como eu precisava. Os professores da banca e a equipe do comitê ficaram surpresos com as funcionalidades do sistema. <br> Agradeço todo apoio para o desenvolvimento do trabalho.',
+          image: 'fabiane.png'
+        },
+        
       ],
       footer: 'Feito com ❤️'
     },
@@ -356,6 +408,12 @@ export default defineI18nConfig(() => ({
           description: 'Sistema de control financiero personal o para un grupo de usuarios. Contáctame para crear un usuario y probarlo, gratis.',
           skills: ['PHP', 'Mysql', 'VueJs'],
           link: 'https://financial.jbcamps.dev/'
+        },
+        {
+          title: 'Taberna Medieval',
+          description: 'Sitio creado para compartir historias fantásticas y reseñas de películas de terror.',
+          skills: ['PHP', 'Wordpress'],
+          link: 'https://tabernamedieval.com/'
         }
       ],
       testimonials: [
@@ -377,7 +435,7 @@ export default defineI18nConfig(() => ({
           name: 'Gisele Ferreira',
           position: ['Máster en Gestión, Innovación y Tecnología en Urgencias y Emergencias por la UEM.'],
           description: 'Recibí una recomendación por su trabajo y hoy recomiendo su trabajo. Desarrolló mi sistema rápidamente, según necesidades muy específicas, ya que era un sistema de salud nunca antes visto. Además de ser muy amable, servicial y educado. Sólo para agradecer. (Original en Portugués).',
-          iimage: 'gisele.png',
+          image: 'gisele.png',
           link: 'https://www.instagram.com/giferreir/'
         },
         {
@@ -386,7 +444,33 @@ export default defineI18nConfig(() => ({
           description: 'Me gustaría elogiar la competencia y el compromiso de José Bruno. Un excelente profesional que desarrolló un sistema para mi trabajo de maestría. <br> Su compromiso fue muy importante para mí para poder terminar mi trabajo. (Original en Portugués).',
           image: 'paula.png',
           link: 'https://www.instagram.com/paulinhaabrante/'
-        }
+        },
+        {
+          name: 'Cassiano Borim',
+          position: ['Gerente de proyectos'],
+          description: 'Bruno es una persona espectacular y un profesional único. Su compromiso con las tareas, resultados, plazos y calidad es diario y claro. Siempre está buscando la mejor solución y la mejor manera de hacerlo. No sólo en relación con sus actividades, ayuda a todos los actores del proyecto, ya sea en dudas, mejoras, procesos o definiciones. Tenerlo en un proyecto es sinónimo de buenos resultados en todo momento. (Original en Portugués).',
+          image: 'cassiano.jpg',
+          link: 'https://www.linkedin.com/in/cassianoborim/'
+        },
+        {
+          name: 'Lucia Zuliani',
+          position: ['Máster en Gestión, Innovación y Tecnología en Urgencias y Emergencias por la UEM.'],
+          description: 'Quisiera agradecer al competente profesional José Bruno, por su incondicional dedicación y excelencia en el desarrollo del software para mi proyecto de maestría en Urgencia y Emergencia en la UEM. Siempre útil. Lo recomiendo altamente. <br>Gratitud. (Original en Portugués).',
+          image: 'lucia.jpg'
+        },
+        {
+          name: 'Felipe Baptiston',
+          position: ['Analista de sistemas'],
+          description: 'Profesional de calidad única, súper responsable, tiene amplio conocimiento en las áreas que trabaja, en los 2 años que trabajé con él siempre ha sido una inspiración para mí, súper respetuoso y competente, es alguien que es un placer tener contigo. el equipo, que une a todos con él, enseña y ayuda con gusto a quien lo necesita, no hay palabras para describir lo gran profesional que es Bruno. (Original en Portugués).',
+          image: 'felipe.png',
+          link: 'https://www.linkedin.com/in/felipe-baptiston-a38042259/'
+        },
+        {
+          name: 'Fabiane Kizima',
+          position: [''],
+          description: 'Me gustaría dar mi opinión sobre el sistema que José Bruno me ayudó a crear para mi maestría profesional. <br> ¡Fue un éxito! Después de las reuniones, el sistema quedó desarrollado exactamente como lo necesitaba. Los profesores del panel y el equipo del comité quedaron sorprendidos por las características del sistema. <br> Agradezco todo el apoyo para el desarrollo del trabajo. (Original en Portugués).',
+          image: 'fabiane.png'
+        },
       ],
       footer: 'Hecho con ❤️'
     },
