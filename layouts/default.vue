@@ -1,5 +1,5 @@
 <template>
-  <v-layout class="rounded rounded-md">
+  <v-layout class="rounded rounded-md layout">
     <v-app-bar :title="$t('slug')" :color="bg" class="app-bar" scroll-behavior="collapse">
       <template v-slot:append>
         <v-menu location="bottom">
@@ -42,6 +42,9 @@ import { useTheme } from 'vuetify/lib/framework.mjs';
 const theme = useTheme()
 const bg = ref('transparent')
 
+const gradientPrimary = ref('rgba(73,0,70,0.5)')
+const gradientSecondary = ref('rgba(0, 5, 13, 0.05)')
+
 const switchLocalePath = useSwitchLocalePath()
 const { locale } = useI18n()
 const items = [
@@ -52,6 +55,7 @@ const items = [
 
 
 onMounted(() => {
+  changeBgColor()
   window.onscroll = () => {
     changeColor()
   }
@@ -67,9 +71,71 @@ function changeColor() {
     bg.value = 'transparent'
   }
 }
+
+function changeBgColor() {
+  setInterval(() => {
+    if (gradientPrimary.value === 'rgba(73,0,70,0.5)') {
+      gradientPrimary.value = 'rgba(14, 1, 71, 0.5)'
+    } else {
+      gradientPrimary.value = 'rgba(73,0,70,0.5)'
+    }
+  }, 30000)
+}
 </script>
 
 <style scoped>
+.layout {
+  padding: 20px 150px;
+  background: linear-gradient(90deg, v-bind(gradientPrimary), v-bind(gradientSecondary), v-bind(gradientPrimary));
+  background-size: 200% 200%;
+
+  -webkit-animation: Animation 20s ease infinite;
+  -moz-animation: Animation 20s ease infinite;
+  animation: Animation 20s ease infinite;
+}
+
+@-webkit-keyframes Animation {
+  0% {
+    background-position: 10% 0%
+  }
+
+  50% {
+    background-position: 91% 100%
+  }
+
+  100% {
+    background-position: 10% 0%
+  }
+}
+
+@-moz-keyframes Animation {
+  0% {
+    background-position: 10% 0%
+  }
+
+  50% {
+    background-position: 91% 100%
+  }
+
+  100% {
+    background-position: 10% 0%
+  }
+}
+
+@keyframes Animation {
+  0% {
+    background-position: 10% 0%
+  }
+  
+  50% {
+    background-position: 91% 100%;
+  }
+
+  100% {
+    background-position: 10% 0%
+  }
+}
+
 .app-bar {
   display: flex;
   align-items: center;
@@ -86,4 +152,9 @@ a {
   display: flex;
   justify-content: space-between;
 }
-</style>
+
+@media (max-width: 600px) {
+  .layout {
+    padding: 10px 50px;
+  }
+}</style>

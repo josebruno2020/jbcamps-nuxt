@@ -1,5 +1,5 @@
 <template>
-  <v-carousel height="auto" hide-delimiters progress="#00897B" show-arrows="hover">
+  <v-carousel height="auto" hide-delimiters progress="white" show-arrows="hover">
     <v-carousel-item v-for="(slide, i) in slides" :key="i">
       <v-sheet class="testimonial">
         <div class="testimonial-container">

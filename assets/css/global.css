@@ -1,20 +1,11 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
-
-  padding: 20px 150px;
-  /* background: #263238 !important; */
-  /* background: rgb(59 130 246 / 0.2) !important; */
-  /* background: rgb(94,0,90) !important;
-  background: linear-gradient(90deg, rgba(94,0,90,0.5041666324733018) 4%, rgba(0,41,113,0.4) 100%) !important; */
-
-  background: rgb(73,0,70);
-  background: linear-gradient(90deg, rgba(73,0,70,0.5) 0%, rgba(0,41,113,0.05) 50%, rgba(73,0,70,1) 100%);
 }
 
 
 @media (max-width: 600px) {
   body {
-    padding: 10px 50px;
+    
   }
 }

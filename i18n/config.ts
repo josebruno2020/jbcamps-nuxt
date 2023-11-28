@@ -152,7 +152,7 @@ export default defineI18nConfig(() => ({
         },
         {
           name: 'Fabiane Kizima',
-          position: [''],
+          position: ['Master in Management, Innovation and Technology in Urgent and Emergency by UEM.'],
           description: "I would like to give feedback on the system that José Bruno helped me create for my professional master's degree. <br> It was a success! After the meetings, the system was developed exactly as I needed it. The panel's teachers and committee team were surprised by the system's features. <br> I appreciate all the support for the development of the work. (Original in Portuguese).",
           image: 'fabiane.png'
         },
@@ -309,7 +309,7 @@ export default defineI18nConfig(() => ({
         },
         {
           name: 'Fabiane Kizima',
-          position: [''],
+          position: ['Mestra em Gestão, Inovação e Tecnologia em Urgente e Emergência pela UEM.'],
           description: 'Gostaria de dar um feedback sobre o sistema que o José Bruno me ajudou a criar para o mestrado profissional. <br> Foi um sucesso! Após as reuniões,  o sistema foi desenvolvido exatamente como eu precisava. Os professores da banca e a equipe do comitê ficaram surpresos com as funcionalidades do sistema. <br> Agradeço todo apoio para o desenvolvimento do trabalho.',
           image: 'fabiane.png'
         },
@@ -467,7 +467,7 @@ export default defineI18nConfig(() => ({
         },
         {
           name: 'Fabiane Kizima',
-          position: [''],
+          position: ['Máster en Gestión, Innovación y Tecnología en Urgencias y Emergencias por la UEM.'],
           description: 'Me gustaría dar mi opinión sobre el sistema que José Bruno me ayudó a crear para mi maestría profesional. <br> ¡Fue un éxito! Después de las reuniones, el sistema quedó desarrollado exactamente como lo necesitaba. Los profesores del panel y el equipo del comité quedaron sorprendidos por las características del sistema. <br> Agradezco todo el apoyo para el desarrollo del trabajo. (Original en Portugués).',
           image: 'fabiane.png'
         },
