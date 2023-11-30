@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     'devicon/devicon.min.css'
   ],
   build: {
-    transpile: ['vuetify'],
+    transpile: ['vuetify'],    
   },
   modules: [
     "nuxt-bootstrap-icons",
@@ -18,6 +18,14 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     'nuxt-gtag'
   ],
+  routeRules: {
+    '/': { isr: 60 }
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true
+    }
+  },
   vite: {
     define: {
       'process.env.DEBUG': false,
