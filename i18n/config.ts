@@ -60,12 +60,12 @@ export default defineI18nConfig(() => ({
           skills: ['Laravel', 'Mysql'],
           link: 'https://redcap.uem.br/hum-cpr'
         },
-        {
-          title: 'HCWM System',
-          description: 'Hospital waste management system at the HUM (University Hospital of Maringá).',
-          skills: ['Laravel', 'Mysql'],
-          link: 'https://residuoshum.com.br/'
-        },
+        // {
+        //   title: 'HCWM System',
+        //   description: 'Hospital waste management system at the HUM (University Hospital of Maringá).',
+        //   skills: ['Laravel', 'Mysql'],
+        //   link: 'https://residuoshum.com.br/'
+        // },
         {
           title: 'Dreno Torax',
           description: 'Online quizzes on Nursing care for patients using pleural drainage.',
@@ -217,12 +217,12 @@ export default defineI18nConfig(() => ({
           skills: ['Laravel', 'Mysql'],
           link: 'https://redcap.uem.br/hum-cpr'
         },
-        {
-          title: 'HCWM System',
-          description: 'Sistema de gerenciamento dos Resíduos hospitalares do HUM (Hospital Universitário de Maringá).',
-          skills: ['Laravel', 'Mysql'],
-          link: 'https://residuoshum.com.br/'
-        },
+        // {
+        //   title: 'HCWM System',
+        //   description: 'Sistema de gerenciamento dos Resíduos hospitalares do HUM (Hospital Universitário de Maringá).',
+        //   skills: ['Laravel', 'Mysql'],
+        //   link: 'https://residuoshum.com.br/'
+        // },
         {
           title: 'Dreno Torax',
           description: 'Questionários onlie sobre Cuidados de enfermagem com pacientes em uso de drenagem pleural.',
@@ -375,12 +375,12 @@ export default defineI18nConfig(() => ({
           skills: ['Laravel', 'Mysql'],
           link: 'https://redcap.uem.br/hum-cpr'
         },
-        {
-          title: 'HCWM System',
-          description: 'Sistema de gestión de residuos hospitalarios del HUM (Hospital Universitario de Maringá).',
-          skills: ['Laravel', 'Mysql'],
-          link: 'https://residuoshum.com.br/'
-        },
+        // {
+        //   title: 'HCWM System',
+        //   description: 'Sistema de gestión de residuos hospitalarios del HUM (Hospital Universitario de Maringá).',
+        //   skills: ['Laravel', 'Mysql'],
+        //   link: 'https://residuoshum.com.br/'
+        // },
         {
           title: 'Dreno Torax',
           description: 'Cuestionarios online sobre cuidados de enfermería a pacientes que utilizan drenaje pleural.',
