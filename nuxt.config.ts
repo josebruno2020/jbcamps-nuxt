@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     '~/assets/css/global.css',
     'vuetify/lib/styles/main.sass',
     '@mdi/font/css/materialdesignicons.min.css',
-    'flag-icons/css/flag-icons.min.css',
     'devicon/devicon.min.css'
   ],
   build: {
@@ -39,7 +38,7 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      'Roboto': [100, 400, 500, 700]
+      'Nunito': [400, 600, 700, 800]
     }
   },
 

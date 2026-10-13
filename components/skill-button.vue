@@ -1,11 +1,7 @@
 <template>
-  <div class="skill-button" @click="onClick">
-    <Transition>
-      <span v-if="titleVisible" class="skill-name">{{ title }}</span>
-    </Transition>
-    <Transition>
-      <i :class="`devicon-${icon}-plain`" class="icon" v-if="imageVisible"></i>
-    </Transition>
+  <div class="skill-chip" :title="title">
+    <i :class="`devicon-${icon}-plain`" class="icon"></i>
+    <span class="skill-name">{{ title }}</span>
   </div>
 </template>
 
@@ -15,62 +11,30 @@ interface skillButtonProps {
   icon: string
 }
 defineProps<skillButtonProps>()
-
-const titleVisible = ref(false)
-const imageVisible = ref(true)
-
-function onClick () {
-  imageVisible.value = !imageVisible.value
-  titleVisible.value = !titleVisible.value
-}
 </script>
 
 <style scoped>
-.skill-button {
-  border: 1px solid #00897B;
-  border-radius: 15px;
-
-  width: 80px;
-  height: 80px;
+.skill-chip {
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  transition: transform .2s, border-color .2s;
+}
 
-  cursor: pointer;
+.skill-chip:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
 }
 
 .skill-name {
-  font-size: .85rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .icon {
-  font-size: 3rem !important;
-}
-
-
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.1s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
-}
-
-@media (max-width: 800px) {
-  .skill-button {
-    width: 70px;
-    height: 70px;
-  }
-
-  .skill-name {
-    font-size: .8rem;
-  }
-
-  .icon {
-    font-size: 2.5rem !important;
-  }
+  font-size: 1.6rem;
 }
 </style>

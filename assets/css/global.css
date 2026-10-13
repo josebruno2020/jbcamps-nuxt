@@ -1,11 +1,24 @@
-body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
+:root {
+  --accent: #26a69a;
+  --accent-warm: #f0b27a;
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --radius: 20px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
-@media (max-width: 600px) {
-  body {
-    
-  }
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  line-height: 1.2;
 }

@@ -1,160 +1,117 @@
 <template>
-  <v-layout class="rounded rounded-md layout">
-    <v-app-bar :title="$t('slug')" :color="bg" class="app-bar" scroll-behavior="collapse">
-      <template v-slot:append>
-        <v-menu location="bottom">
-          <template v-slot:activator="{ props }">
-            <a href="https://github.com/josebruno2020/jbcamps-nuxt" target="_blank">
-              <v-btn icon="mdi-github" :title="$t('github')"></v-btn>
-            </a>
-            <v-btn icon="mdi-translate" v-bind="props"></v-btn>
-          </template>
+  <v-layout class="layout">
+    <v-app-bar flat color="transparent" class="app-bar" height="68">
+      <div class="app-bar-inner">
+        <span class="brand">{{ $t('slug') }}</span>
+        <div class="app-bar-actions">
+          <v-btn icon="mdi-github" variant="text" href="https://github.com/josebruno2020/jbcamps-nuxt" target="_blank"
+            :title="$t('github')" :aria-label="$t('github')" />
+          <v-menu location="bottom end">
+            <template #activator="{ props }">
+              <v-btn variant="tonal" v-bind="props" class="lang-button">
+                {{ locale.toUpperCase() }}
+              </v-btn>
+            </template>
 
-          <v-list density="compact">
-            <v-list-item :active="locale === title.toLowerCase()" v-for="({ title, flag }, index) in items" :key="index">
-              <NuxtLink :to="switchLocalePath(title.toLocaleLowerCase())" class="lang-item">
-                <span :class="`fi fi-${flag}`"></span>
-                <v-list-item-title>
-                  {{ title }}
-                </v-list-item-title>
-              </NuxtLink>
-            </v-list-item>
-          </v-list>
-        </v-menu>
-
-      </template>
+            <v-list density="compact" rounded="lg" class="lang-list">
+              <v-list-item v-for="code in languages" :key="code" :active="locale === code"
+                :to="switchLocalePath(code)">
+                <v-list-item-title>{{ code.toUpperCase() }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+        </div>
+      </div>
     </v-app-bar>
-    <v-main class="">
-      <slot />
-    </v-main>
 
-    <v-footer app name="footer" class="d-flex justify-center">
-      <span class="text-center">
-        {{ $t('footer') }}
-      </span>
-    </v-footer>
+    <v-main class="main">
+      <div class="container">
+        <slot />
+      </div>
+
+      <footer class="footer">
+        <span class="footer-text">{{ $t('footer') }}</span>
+      </footer>
+    </v-main>
   </v-layout>
 </template>
 
 <script setup lang="ts">
-import { useTheme } from 'vuetify/lib/framework.mjs';
-
-const theme = useTheme()
-const bg = ref('transparent')
-
-const gradientPrimary = ref('rgba(73,0,70,0.5)')
-const gradientSecondary = ref('rgba(0, 5, 13, 0.05)')
-
 const switchLocalePath = useSwitchLocalePath()
 const { locale } = useI18n()
-const items = [
-  { title: 'En', flag: 'us' },
-  { title: 'Pt', flag: 'br' },
-  { title: 'Es', flag: 'es' }
-]
-
-
-onMounted(() => {
-  changeBgColor()
-  window.onscroll = () => {
-    changeColor()
-  }
-})
-
-function changeColor() {
-  if (
-    document.body.scrollTop > 40 ||
-    document.documentElement.scrollTop > 40
-  ) {
-    bg.value = theme.global.current.value.colors.surface
-  } else {
-    bg.value = 'transparent'
-  }
-}
-
-function changeBgColor() {
-  setInterval(() => {
-    if (gradientPrimary.value === 'rgba(73,0,70,0.5)') {
-      gradientPrimary.value = 'rgba(14, 1, 71, 0.5)'
-    } else {
-      gradientPrimary.value = 'rgba(73,0,70,0.5)'
-    }
-  }, 30000)
-}
+const languages = ['en', 'pt', 'es']
 </script>
 
 <style scoped>
 .layout {
-  padding: 20px 150px;
-  background: linear-gradient(90deg, v-bind(gradientPrimary), v-bind(gradientSecondary), v-bind(gradientPrimary));
-  background-size: 200% 200%;
-
-  -webkit-animation: Animation 20s ease infinite;
-  -moz-animation: Animation 20s ease infinite;
-  animation: Animation 20s ease infinite;
-}
-
-@-webkit-keyframes Animation {
-  0% {
-    background-position: 10% 0%
-  }
-
-  50% {
-    background-position: 91% 100%
-  }
-
-  100% {
-    background-position: 10% 0%
-  }
-}
-
-@-moz-keyframes Animation {
-  0% {
-    background-position: 10% 0%
-  }
-
-  50% {
-    background-position: 91% 100%
-  }
-
-  100% {
-    background-position: 10% 0%
-  }
-}
-
-@keyframes Animation {
-  0% {
-    background-position: 10% 0%
-  }
-  
-  50% {
-    background-position: 91% 100%;
-  }
-
-  100% {
-    background-position: 10% 0%
-  }
+  min-height: 100vh;
+  background:
+    radial-gradient(900px circle at 85% -5%, rgba(38, 166, 154, 0.16), transparent 60%),
+    radial-gradient(700px circle at 0% 40%, rgba(240, 178, 122, 0.08), transparent 60%),
+    #161210;
 }
 
 .app-bar {
+  backdrop-filter: blur(14px);
+  background: rgba(22, 18, 16, 0.7) !important;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.app-bar-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: flex;
   align-items: center;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-
-}
-
-.lang-item {
-  gap: .5rem;
-  display: flex;
   justify-content: space-between;
 }
 
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.app-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.main {
+  min-width: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 24px 64px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 16px;
+  border-top: 1px solid var(--card-border);
+}
+
+.footer-text {
+  opacity: .7;
+  font-size: .9rem;
+}
+
 @media (max-width: 600px) {
-  .layout {
-    padding: 10px 50px;
+  .app-bar-inner {
+    padding: 0 16px;
   }
-}</style>
+
+  .brand {
+    font-size: .95rem;
+  }
+
+  .container {
+    padding: 16px 16px 48px;
+  }
+}
+</style>

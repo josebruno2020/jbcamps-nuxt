@@ -1,26 +1,24 @@
 <template>
-  <v-carousel height="auto" hide-delimiters progress="white" show-arrows="hover">
-    <v-carousel-item v-for="(slide, i) in slides" :key="i">
-      <v-sheet class="testimonial">
-        <div class="testimonial-container">
-          <div class="text-justify">
-            <q class="text-justify description" v-html="slide.description"></q>
-          </div>
-          <article class="text-center mt-5">
-            <img v-if="slide.image" :src="`/img/${slide.image}`" alt="" class="testimonial-img">
-            <a :href="slide.link" target="_blank" class="testimonial-link" :title="slide.name">
-              <div class="testimonial-name">
-                {{ slide.name }}
-              </div>
+  <div>
+    <v-carousel height="auto" hide-delimiters show-arrows="hover" class="carousel">
+      <v-carousel-item v-for="(slide, i) in slides" :key="i">
+        <div class="testimonial">
+          <q class="description" v-html="slide.description"></q>
+          <article class="author">
+            <img v-if="slide.image" :src="`/img/${slide.image}`" :alt="slide.name" class="testimonial-img">
+            <a v-if="slide.link" :href="slide.link" target="_blank" rel="noopener" class="testimonial-link">
+              {{ slide.name }}
             </a>
-            <div v-for="position in slide.position" style="line-height: 1.35rem;">
-              <span class="testimonial-position">{{ position }}</span>
+            <span v-else class="testimonial-name">{{ slide.name }}</span>
+            <div v-for="position in slide.position" :key="position" class="testimonial-position">
+              {{ position }}
             </div>
           </article>
         </div>
-      </v-sheet>
-    </v-carousel-item>
-  </v-carousel>
+      </v-carousel-item>
+    </v-carousel>
+    <p v-if="note" class="note">{{ note }}</p>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -31,52 +29,75 @@ interface testimonialSlide {
   image?: string
   link?: string
 }
-const { locale, messages } = useI18n()
+const { locale, messages, t } = useI18n()
 const slides = messages.value[locale.value].testimonials as testimonialSlide[]
+const note = t('testimonialNote')
 </script>
 
 <style scoped>
 .carousel {
-  min-height: 350px !important;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
 }
 
 .testimonial {
-  min-height: 500px !important;
-  display: flex;
-  padding: 20px 80px;
-  background-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-.testimonial-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 24px;
+  min-height: 460px;
+  padding: 40px 80px;
+  text-align: center;
 }
 
 .description {
-  font-size: 1.3rem;
-}
-
-.testimonial-name {
-  margin-top: 3px;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-style: italic;
+  max-width: 760px;
 }
 
-.testimonial-position {
-  font-size: .9rem;
+.author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
 }
 
 .testimonial-img {
-  width: 100px;
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
   border-radius: 50%;
+  border: 3px solid var(--accent);
+  margin-bottom: 8px;
 }
 
+.testimonial-name,
 .testimonial-link {
-  color: white;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: inherit;
+  text-decoration: none;
 }
 
+.testimonial-link:hover {
+  color: var(--accent-warm);
+}
+
+.testimonial-position {
+  font-size: .85rem;
+  opacity: .7;
+  line-height: 1.4;
+}
+
+.note {
+  margin-top: 8px;
+  text-align: right;
+  font-size: .8rem;
+  opacity: .6;
+}
 
 @media (max-width: 800px) {
   .description {
@@ -84,16 +105,8 @@ const slides = messages.value[locale.value].testimonials as testimonialSlide[]
   }
 
   .testimonial {
-    padding: 30px;
-    min-height: 630px !important;
-  }
-
-  .testimonial-position {
-    font-size: .65rem;
-  }
-
-  .testimonial-img {
-    width: 85px;
+    padding: 32px 24px;
+    min-height: 600px;
   }
 }
 </style>

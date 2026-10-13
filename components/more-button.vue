@@ -1,11 +1,8 @@
 <template>
-  <div class="more-button">
-    <a :href="link" target="_blank" :title="`${$t('more')}...`">
-      <v-btn prepend-icon="mdi-arrow-top-right" variant="tonal" style="width: 100%;">
-        {{ $t('more') }}
-      </v-btn>
-    </a>
-  </div>
+  <v-btn :href="link" target="_blank" prepend-icon="mdi-arrow-top-right" variant="text" color="primary"
+    class="more-button">
+    {{ $t('more') }}
+  </v-btn>
 </template>
 
 <script setup lang="ts">
@@ -18,11 +15,8 @@ defineProps<moreButtonProps>()
 
 <style scoped>
 .more-button {
-  margin-top: 10px;
-  width: 100%;
-}
-
-a {
-  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 700;
 }
 </style>

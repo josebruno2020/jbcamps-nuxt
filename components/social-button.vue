@@ -1,34 +1,24 @@
 <template>
-  <div class="social-link">
-    <a :href="link" target="_blank">
-      <BootstrapIcon :name="icon" style="font-size: 1.65rem; color: white;" />
-    </a>
-  </div>
+  <v-btn :href="link" target="_blank" :prepend-icon="icon" :color="primary ? 'primary' : undefined"
+    :variant="primary ? 'flat' : 'tonal'" size="large" class="contact-button">
+    {{ label }}
+  </v-btn>
 </template>
 
 <script setup lang="ts">
 interface socialButtonProps {
-  icon: 'github' | 'linkedin' | 'envelope' | 'whatsapp'
+  icon: string
   link: string
-  background?: string
+  label: string
+  primary?: boolean
 }
 defineProps<socialButtonProps>()
-
 </script>
 
 <style scoped>
-
-.social-link{
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  transition: .3s;
-}
-.social-link:hover {
-  background: v-bind(background);
+.contact-button {
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 700;
 }
 </style>
