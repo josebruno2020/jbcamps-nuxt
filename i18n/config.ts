@@ -107,6 +107,12 @@ export default defineI18nConfig(() => ({
           skills: ['PHP', 'MySQL', 'Vue.js'],
           link: 'https://financial.jbcamps.dev/'
         },
+        {
+          title: 'Destra Sistema',
+          description: 'System for vehicle registration agents (despachantes) in Paraná, Brazil.',
+          skills: ['Laravel', 'MySQL'],
+          link: 'https://destrasistema.com.br/'
+        },
         // {
         //   title: 'Taberna Medieval',
         //   description: 'Website created to share fantasy stories and horror movie reviews.',
@@ -278,6 +284,12 @@ export default defineI18nConfig(() => ({
           skills: ['PHP', 'MySQL', 'Vue.js'],
           link: 'https://financial.jbcamps.dev/'
         },
+        {
+          title: 'Destra Sistema',
+          description: 'Sistema para despachantes do PR.',
+          skills: ['Laravel', 'MySQL'],
+          link: 'https://destrasistema.com.br/'
+        },
         // {
         //   title: 'Taberna Medieval',
         //   description: 'Site criado para compartilhar histórias fantásticas e resenhas de filmes de terror.',
@@ -448,6 +460,12 @@ export default defineI18nConfig(() => ({
           description: 'Sistema de control financiero personal o para un grupo de usuarios. Contáctame para crear un usuario y probarlo gratis.',
           skills: ['PHP', 'MySQL', 'Vue.js'],
           link: 'https://financial.jbcamps.dev/'
+        },
+        {
+          title: 'Destra Sistema',
+          description: 'Sistema para gestores de trámites vehiculares (despachantes) de Paraná, Brasil.',
+          skills: ['Laravel', 'MySQL'],
+          link: 'https://destrasistema.com.br/'
         },
         // {
         //   title: 'Taberna Medieval',
