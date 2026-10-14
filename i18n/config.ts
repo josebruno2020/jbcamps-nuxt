@@ -36,12 +36,12 @@ export default defineI18nConfig(() => ({
       experience: [
         {
           title: 'Stone Co.',
-          position: 'Senior Web Developer',
+          position: 'Senior Developer',
           period: '2024 - Present'
         },
         {
           title: 'Ligue Telecom',
-          position: 'Senior Web Developer',
+          position: 'Senior Developer',
           period: '2022 - 2024'
         },
         {
@@ -213,12 +213,12 @@ export default defineI18nConfig(() => ({
       experience: [
         {
           title: 'Stone Co.',
-          position: 'Desenvolvedor Web Sênior',
+          position: 'Desenvolvedor Sênior',
           period: '2024 - Atual'
         },
         {
           title: 'Ligue Telecom',
-          position: 'Desenvolvedor Web Sênior',
+          position: 'Desenvolvedor Sênior',
           period: '2022 - 2024'
         },
         {
@@ -390,12 +390,12 @@ export default defineI18nConfig(() => ({
       experience: [
         {
           title: 'Stone Co.',
-          position: 'Desarrollador Web Sénior',
+          position: 'Desarrollador Sénior',
           period: '2024 - Actualidad'
         },
         {
           title: 'Ligue Telecom',
-          position: 'Desarrollador Web Sénior',
+          position: 'Desarrollador Sénior',
           period: '2022 - 2024'
         },
         {
